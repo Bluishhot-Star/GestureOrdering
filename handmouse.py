@@ -4,7 +4,7 @@ from PIL import ImageFont, ImageDraw, Image
 import numpy as np
 import pyautogui   
 
-
+pyautogui.FAILSAFE = False
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -40,7 +40,7 @@ with mp_hands.Hands(
     results = hands.process(image)
 
     # screen_height : y_ = image_height : y
-    # y_ = y*screen_height/image_height
+    # y_ = y*screen_height/image_height₩
 
     image.flags.writeable = True
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.hover {
+    border: 8px solid;
+    border-image: repeating-linear-gradient(135deg,#F8CA00 0 10px,#E97F02 0 20px,#BD1550 0 30px) 8;
+    -webkit-mask: 
+        conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+        var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+        conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+        0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+        linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask .3s .3s;
+}
+.hover:hover {
+    --_i : 100%;
+    color:rgb(0, 0, 93) ;
+    transition: .3s, -webkit-mask .3s .3s;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    align-items: center;
+}
+h3 {
+    font-family: 'GangwonEduPowerExtraBoldA', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    cursor: pointer;
+    padding: 0 .1em;
+}
+.burger {
+    font-family: 'GangwonEduPowerExtraBoldA', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    cursor: pointer;
+    padding: 0 .1em;
+    width: 10vh;
+    height: 10vh;
+}
